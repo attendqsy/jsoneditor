@@ -1,3 +1,4 @@
+
 # JSON Editor
 
 [![Version](https://img.shields.io/npm/v/jsoneditor.svg)](https://www.npmjs.com/package/jsoneditor)
@@ -5,6 +6,64 @@
 [![Maintenance](https://img.shields.io/maintenance/yes/2023.svg)](https://github.com/josdejong/jsoneditor/pulse)
 [![License](https://img.shields.io/github/license/josdejong/jsoneditor.svg)](https://github.com/josdejong/jsoneditor/blob/master/LICENSE)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjosdejong%2Fjsoneditor.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjosdejong%2Fjsoneditor?ref=badge_shield)
+## Based on [`josdejong/jsoneditor`](https://github.com/josdejong/jsoneditor), supports a dark theme `ace/github/dark`.
+
+## Install
+with npm (recommended):
+
+    npm install sean-jsoneditor
+
+<img alt="json editor" src="https://github.com/attendqsy/jsoneditor/blob/develop/misc/jsoneditor-dark.png">
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>JSONEditor | Custom styling</title>
+
+    <link href="../dist/jsoneditor.css" rel="stylesheet" type="text/css" />
+    <script src="../dist/jsoneditor.js"></script>
+
+    <style type="text/css">
+      #jsoneditor {
+        width: 500px;
+        height: 500px;
+      }
+
+      p {
+        width: 500px;
+        font-family: "DejaVu Sans", sans-serif;
+      }
+    </style>
+
+    <link href="./css/darktheme.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="jsoneditor"></div>
+
+    <script>
+      const container = document.getElementById("jsoneditor");
+      const options = {
+        modes: ["tree", "text", "code"],
+        mode: "code",
+        theme: "ace/github/dark",
+      };
+      const json = {
+        array: [1, 2, 3],
+        boolean: true,
+        null: null,
+        number: 123,
+        object: { a: "b", c: "d" },
+        string: "Hello World",
+      };
+      const editor = new JSONEditor(container, options, json);
+    </script>
+  </body>
+</html>
+
+```
 
 JSON Editor is a web-based tool to view, edit, format, and validate JSON. It has various modes such as a tree editor, a code editor, and a plain text editor. The editor can be used as a component in your own web application. It can be loaded as CommonJS module, AMD module, or as a regular javascript file.
 

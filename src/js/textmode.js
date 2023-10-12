@@ -83,8 +83,8 @@ textmode.create = function (container, options = {}) {
 
   // determine theme
   this.theme = options.theme || DEFAULT_THEME
-  if (this.theme === DEFAULT_THEME && _ace) {
-    tryRequireThemeJsonEditor()
+  if (_ace) {
+    tryRequireThemeJsonEditor(this.theme)
   }
 
   if (options.onTextSelectionChange) {

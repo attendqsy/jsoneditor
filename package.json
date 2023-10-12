@@ -1,6 +1,6 @@
 {
-  "name": "jsoneditor",
-  "version": "9.10.3",
+  "name": "sean-jsoneditor",
+  "version": "1.0.0",
   "main": "./dist/jsoneditor.min.js",
   "description": "A web-based tool to view, edit, format, and validate JSON",
   "tags": [
@@ -9,14 +9,14 @@
     "viewer",
     "formatter"
   ],
-  "author": "Jos de Jong <wjosdejong@gmail.com>",
+  "author": "Sean <attendqsy@gmail.com>",
   "license": "Apache-2.0",
   "homepage": "https://jsoneditoronline.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/josdejong/jsoneditor.git"
+    "url": "https://github.com/attendqsy/jsoneditor"
   },
-  "bugs": "https://github.com/josdejong/jsoneditor/issues",
+  "bugs": "https://github.com/attendqsy/jsoneditor/issues",
   "scripts": {
     "build": "gulp",
     "build-and-test": "npm run build && npm test && npm run lint",
